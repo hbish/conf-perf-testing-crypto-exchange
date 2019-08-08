@@ -1,0 +1,23 @@
+{
+  "name": "perf-test-crypto-exchange-api",
+  "version": "1.0.0",
+  "description": "Are we there yet? Lessons Learn Performance Testing a Crypto Exchange API",
+  "main": "index.js",
+  "scripts": {
+    "start": "fusuma start",
+    "build": "fusuma build",
+    "pdf": "fusuma pdf",
+    "live": "fusuma live -w '@nodejs'",
+    "deploy": "fusuma deploy"
+  },
+  "author": "hbish <git@hiroppy.me> (https://hbish.com)",
+  "license": "MIT",
+  "dependencies": {
+    "styled-components": "^4.3.1",
+    "@fortawesome/fontawesome-free": "^5.3.1"
+  },
+  "devDependencies": {
+    "@fusuma/cli": "^1.14.1",
+    "fusuma": "^1.14.1"
+  }
+}
