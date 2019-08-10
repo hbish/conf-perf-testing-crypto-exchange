@@ -10,7 +10,7 @@
 }
 
 .performance-testing {
-    background-image: linear-gradient(var(--black-color), var(--black-color)), url('./static/gif/slow_reaction.gif');
+    background-image: linear-gradient(var(--black-color), var(--black-color)), url('static/images/slow_reaction.gif');
 }
 
 .fullscreen-bg {

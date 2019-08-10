@@ -11,15 +11,15 @@
 
 <div class="grid">
   <div class="column">
-    <img src="../static/gif/little-load.gif" alt="slow button bash"/>
+    <img src="../static/images/load-fast.gif" alt="slow button bash"/>
     <p>fast</p>
   </div>
   <div class="column">
-    <img src="../static/gif/more-load.gif" alt="faster button bash"/>
+    <img src="../static/images/load-faster.gif" alt="faster button bash"/>
     <p>faster</p>
   </div>
   <div class="column">
-    <img src="../static/gif/max-load.gif" alt="fastest button bash"/>
+    <img src="../static/images/load-fastest.gif" alt="fastest button bash"/>
     <p>fastest</p>
   </div>
 </div>

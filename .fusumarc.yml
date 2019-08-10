@@ -20,6 +20,6 @@ slide:
 extends:
   js: ./common/main.js
   css: ./style.css
-  webpack:
+  webpack: ./webpack.config.js
 build:
   ssr: true
