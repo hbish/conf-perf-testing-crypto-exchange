@@ -1,0 +1,22 @@
+:root {
+    --main-color: #3498db;
+    --sub-color: #ff874d;
+    --green-color: #60d7a9;
+    --white-color: #f5f5f5;
+    --black-color: #464646;
+    --gray-color: #545454;
+    --skin-color: #ffcc99;
+    --color: #7bb7fa;
+}
+
+.performance-testing {
+    background-image: linear-gradient(var(--black-color), var(--black-color)), url('./static/gif/slow_reaction.gif');
+}
+
+.fullscreen-bg {
+    color: var(--color);
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}

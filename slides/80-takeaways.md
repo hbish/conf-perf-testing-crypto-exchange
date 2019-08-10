@@ -1,3 +1,4 @@
+<!-- sectionTitle: Wrap up -->
 # Takeaways
 
 - Performance Test != Non-Functional Testing
