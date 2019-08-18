@@ -1,10 +1,17 @@
+import { Card } from '@fusuma/client';
+
 ## Agenda
 
 <!-- contents -->
 
 ---
 <!-- sectionTitle: Quick Overview of Performance Testing -->
-## What is Performance Testing?
+<!-- note: It can also serve to investigate, measure, validate or verify other quality attributes of the system, such as scalability, reliability and resource usage. 
+-->
+
+## ...a testing practice performed to determine how a system performs in terms of responsiveness and stability... 
+
+(source: wikipedia)
 
 --- 
 ## What flavours does it come in?
@@ -46,23 +53,26 @@
 ---
 <!-- sectionTitle: Crash course on exchanges -->
 <!-- note
-- An trading exchange as the name implies is where people exchange one thing for another
+- An trading exchange as the name implies is a marketplace where people exchange one thing for another
 - It can be fiat money, physical commodity and in our case crypto-currencies
+- Core function of an exchange is to ensure fair and orderly trading and efficient dissemination of price information
 - Most exchanges are centralized meaning the exchange creates wallets on your behave and safeguards your money
-- 
+- But there is a huge trend moving towards decentralised exchanges after a few hacking incidents such as Mt. Gox, Bitfinex and Binance.
 -->
 ## Crypto Exchange: A Crash Course
 
-<div class="content-left">
-  <h3>1/9 left top</h3>
-  <p><code>.slide-top and .content-left</code></p>
-</div>
-- $ / ₿
-- Centralized vs Decentralised
+<img src="../static/images/exchanges.png" alt="Centralized vs Decentralized Exchanges" /> 
+<small>source: <a href="https://en.bitcoinwiki.org/wiki/DEXes">bitcoinwiki</a></small>
 
----
-## API
--
+--- 
+<Card
+  left={<img src="../static/images/api.png" alt="Centralized vs Decentralized Exchanges" />}
+  right={
+    <>
+      <h2>API</h2>
+    </>
+  }
+/>
 
 --- 
 ## Typical Architecture
