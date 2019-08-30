@@ -3,33 +3,46 @@
 </div>
 
 ## Ben Shi
+
 _Software Engineering Manager @ Grow Super_
 
-_<sup><sub>ex. Versent, JPM,  ACI, Distra</sub></sup>_
 
-<br />
+<div class="content-center"><p>💪 🥾 🍔 🍜</p></div>
 
-<ul class="flexblock steps">
+<ul class="wrap flexblock clients border slide-bottom">
     <li>
-        <div class=""></div>
-        <p>📐⏱</p>
-        <small>Quality Assurance Engineer</small>
+        <figure class="aligncenter">
+            <img class="" src="../static/images/distra.png" alt="Ben Shi"/>
+            <img class="" src="../static/images/aci-worldwide.png" alt="Ben Shi"/>
+            <figcaption class="">
+                <h3>📐⏱</h3>
+                <p>Quality Assurance Engineer</p>
+                <small>~3.5 years</small>
+            </figcaption>
+        </figure>
     </li>
     <li>
-        <div class="process step-2"></div>
-        <p>🛠🏗</p>
-        <small>Software Engineer</small>
+        <figure class="aligncenter">
+            <img class="" src="../static/images/jpmorgan.png" alt="Ben Shi"/>
+            <img class="" src="../static/images/versent.png" alt="Ben Shi"/>
+            <figcaption>
+                <h3>🛠🏗</h3>
+                <p>Software Engineer / Consultant</p>
+                <small>~7 years</small>
+            </figcaption>
+        </figure>
     </li>
     <li>
-        <div class="process step-3"></div>
-        <p>📝🌱</p>
-        <small>Engineering Manager</small>
+        <figure class="aligncenter">
+            <img class="" src="../static/images/grow.png" alt="Ben Shi"/>
+            <figcaption>
+                <h3>📝🌱</h3>
+                <p>Software Engineering Manager</p>
+                <small>still growing!</small>
+            </figcaption>
+        </figure>
     </li>
 </ul>
-           
-<br />
-
-#### misc. 💪 🥾 🍔 🍜
 
 ---
 <!-- note

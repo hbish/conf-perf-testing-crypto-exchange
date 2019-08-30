@@ -32,6 +32,9 @@ import { Card } from '@fusuma/client';
 </div>
 
 --- 
+<!-- note
+- They achieve different purposes for example a load/spike test
+-->
 ## What flavours does it come in?
 
 - Load testing
@@ -83,10 +86,9 @@ import { Card } from '@fusuma/client';
 ---
 <!-- sectionTitle: Crash course on exchanges -->
 <!-- note
-- An trading exchange as the name implies is a marketplace where people exchange one thing for another
-- It can be fiat money, physical commodity and in our case crypto-currencies
-- Core function of an exchange is to ensure fair and orderly trading and efficient dissemination of price information
 - Most exchanges are centralized meaning the exchange creates wallets on your behave and safeguards your money
+- Centralised exchanges require you to perform KYC (know you customer), basically upload personal identifiable information 
+- and there are different levels of KYC which would grant you additional trading volumes
 - But there is a huge trend moving towards decentralised exchanges after a few hacking incidents such as Mt. Gox, Bitfinex and Binance.
 -->
 <img src="../static/images/exchanges.png" alt="Centralized vs Decentralized Exchanges" /> 
@@ -101,8 +103,8 @@ import { Card } from '@fusuma/client';
 - Websocket feed - to retrieve ticker information like the price of the symbol, the high/low over different period of time. I'm not going to spend to much time on these, if you are interested feel free to read up the API documentation.
 -->
 <Card
-  left={<img src="../static/images/api.png" alt="Centralized vs Decentralized Exchanges" />}
-  right={
+  right={<img src="../static/images/api.png" alt="Centralized vs Decentralized Exchanges" />}
+  left={
     <>
       <h2>API</h2>
     </>
@@ -110,6 +112,11 @@ import { Card } from '@fusuma/client';
 />
 
 --- 
+<!-- note
+- This is a extremely simplified view of how a crypto exchange works
+- Its fronted by usually web API and some exchanges provide websocket API
+- 
+-->
 ## Typical Architecture
 
 ```text
@@ -131,5 +138,6 @@ import { Card } from '@fusuma/client';
 <p />
 <small>additional reading 
 
-[How do cryptocurrency exchanges work and what technologies are driving disruption? - Naveen Saraswat](https://hackernoon.com/how-do-cryptocurrency-exchanges-work-and-what-technologies-are-driving-disruption-33d0007eb018)  
+[How do Cryptocurrency Exchanges Work? And What Technologies are Driving Disruption - Naveen Saraswat](https://hackernoon.com/how-do-cryptocurrency-exchanges-work-and-what-technologies-are-driving-disruption-33d0007eb018)  
+
 </small>
