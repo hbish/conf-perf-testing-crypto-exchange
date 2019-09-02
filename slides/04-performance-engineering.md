@@ -5,19 +5,48 @@
 
 --- 
 
-# Two birds, one stone 
-- 
+# What about GraphQL?
+- It's possible, but more complicated
+- Different combination of fields and fragments
+- Make sure you have sensible request tracing
+
+--- 
+
+# Many birds, one stone 
+
+Reusable Tests. Framework selection is critical!
+
+E2E test in Dev Deployment
+```bash
+./gradlew gatlingRun -DbaseUrl="http://dev.env:80/api" -DnumberOfUser=1 -DrunDurationSecs=300
+```
+
+Perf Test
+```bash
+./gradlew gatlingRun -DbaseUrl="http://perf.env:80/api" -DnumberOfUser=2000 -DrunDurationSecs=3600
+```
+
+Smoke Test in Production
+```bash
+./gradlew gatlingRun -DbaseUrl="http://prod.env:80/api" -DnumberOfUser=1 -DrunDurationSecs=10
+```
 
 ---
-
+<!-- note
+Cloudflare had a global performance degradation due to a small change to regex in their WAF rule set which caused CPU to become exhausted. 
+-->
 # CI/CD
-- Build performance testing as part of your pipeline 
-- Monitor your build time
+- Build a small subset of your performance testing suite as part of your pipeline 
+- Monitor the run time
+- Fail or Add alert for any executions that over n %
+- Run perf early in the SDLC and as often as possible.
+
+Cloudflare Outage July 2019 - https://blog.cloudflare.com/details-of-the-cloudflare-outage-on-july-2-2019/
 
 ---
 
 # Test in Production?
 
---- 
+## Yes, only if you can cleanup the data
 
-# Scaling the performance test
+### Otherwise, test in a separate environment with configuration similar to prod
