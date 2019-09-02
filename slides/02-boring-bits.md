@@ -31,6 +31,36 @@ import { Card } from '@fusuma/client';
   </div>
 </div>
 
+---
+<!-- classes: fullscreen-bg performance-testing -->
+<!-- note
+- Majority (90%) of the time people measure response time and throughput
+-->
+## What can we measure?
+
+---
+## What can we measure?
+<div class="wrap grid">
+    <div class="column">
+        <h4>Client</h4>
+        <ul>
+            <li>Latency/Response Time - Round Trip</li>
+            <li>Throughput</li>
+        </ul>
+    </div>
+    <div class="column">
+        <h4>Server</h4>
+        <ul>
+            <li>Latency/Response Time - Processing Time</li>
+            <li>Throughput</li>
+            <li>Availability</li>
+            <li>Server metrics - CPU, memory, disk I/O, network utilization...</li>
+            <li>Connection pooling</li>
+            <li>Cache hit/miss ratios</li>
+        </ul>
+    </div>
+</div>
+
 --- 
 <!-- note
 - They achieve different purposes for example a load/spike test
@@ -46,34 +76,7 @@ import { Card } from '@fusuma/client';
 - Isolation testing
 - Internet testing
 
----
-<!-- classes: fullscreen-bg performance-testing -->
-<!-- note
-- Majority (90%) of the time people measure response time and throughput
--->
-## What can we measure?
-
----
-## What can we measure?
-<div class="wrap grid">
-    <div class="column">
-        <h4>Client</h4>
-        <ul>
-            <li>Response Time - Round Trip</li>
-            <li>Throughput</li>
-        </ul>
-    </div>
-    <div class="column">
-        <h4>Server</h4>
-        <ul>
-            <li>Response Time - Processing Time</li>
-            <li>Throughput</li>
-            <li>Server metrics - CPU, memory, disk I/O...</li>
-            <li>Connection pooling</li>
-            <li>Cache hit/miss ratios</li>
-        </ul>
-    </div>
-</div>
+The Art of Application Performance Testing - Ian Molyneaux
 
 ---
 <!-- note
