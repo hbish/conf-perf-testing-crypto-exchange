@@ -31,15 +31,16 @@ Smoke Test in Production
 ./gradlew gatlingRun -DbaseUrl="http://prod.env:80/api" -DnumberOfUser=1 -DrunDurationSecs=10
 ```
 
+
 ---
 <!-- note
 Cloudflare had a global performance degradation due to a small change to regex in their WAF rule set which caused CPU to become exhausted. 
 -->
 # CI/CD
 - Build a small subset of your performance testing suite as part of your pipeline 
-- Monitor the run time
+- Monitor the build time and capture performance metrics
 - Fail or Add alert for any executions that over n %
-- Run perf early in the SDLC and as often as possible.
+- Run perf early in the SDLC and as often as possible
 
 Cloudflare Outage July 2019 - https://blog.cloudflare.com/details-of-the-cloudflare-outage-on-july-2-2019/
 
