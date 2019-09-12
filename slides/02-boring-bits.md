@@ -76,7 +76,11 @@ import { Card } from '@fusuma/client';
 - Isolation testing
 - Internet testing
 
+<small>additional reading 
+
 The Art of Application Performance Testing - Ian Molyneaux
+
+</small>
 
 ---
 <!-- note
