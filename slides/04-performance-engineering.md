@@ -1,22 +1,30 @@
 <!-- sectionTitle: Performance Engineering -->
-# What about Microservices/Serverless?
+
+### ⏱
+## Performance Engineering
+Quickfire Edition
+
+--- 
+## What about Microservices/Serverless?
 - Watch for timeouts
 - Perform spike tests to determine time taken to scale
 
 --- 
 
-# What about GraphQL?
+## What about GraphQL?
 - It's possible, but more complicated
 - Different combination of fields and fragments
 - Make sure you have sensible request tracing
 
 --- 
 
-# Many birds, one stone 
+## Many birds, one stone 
 
-Reusable Tests. Framework selection is critical!
+### Reusable Tests. Framework selection is critical!
 
-E2E test in Dev Deployment
+<br />
+
+E2E test in Dev/Test Deployment
 ```bash
 ./gradlew gatlingRun -DbaseUrl="http://dev.env:80/api" -DnumberOfUser=1 -DrunDurationSecs=300
 ```
@@ -36,18 +44,25 @@ Smoke Test in Production
 <!-- note
 Cloudflare had a global performance degradation due to a small change to regex in their WAF rule set which caused CPU to become exhausted. 
 -->
-# CI/CD
+## CI/CD
+
 - Build a small subset of your performance testing suite as part of your pipeline 
 - Monitor the build time and capture performance metrics
 - Fail or Add alert for any executions that over n %
 - Run perf early in the SDLC and as often as possible
 
+<br />
+
+<small>
+
 Cloudflare Outage July 2019 - https://blog.cloudflare.com/details-of-the-cloudflare-outage-on-july-2-2019/
+
+</small>
 
 ---
 
-# Test in Production?
+## Test in Production?
 
-## Yes, only if you can cleanup the data
+### Yes, only if you can cleanup the data
 
-### Otherwise, test in a separate environment with configuration similar to prod
+Otherwise, test in a separate environment with configuration similar to prod

@@ -1,4 +1,5 @@
 meta:
+  url: "https://dddsydney2019.hbish.com"
   title: Are we there yet? Lesson learnt performance testing a crypto exchange API
   thumbnail:
   description: A talk about lessons in performance testing an crypto exchange API.
@@ -13,7 +14,11 @@ slide:
   code:
     languages:
       - javascript
-    plugins: []
+      - scala
+      - bash
+      - rust
+    plugins:
+      - line-numbers
     theme: default
   chart: false
   math: false
