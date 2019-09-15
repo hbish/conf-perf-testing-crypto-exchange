@@ -1,21 +1,32 @@
 <!-- sectionTitle: Wrap up -->
+<!-- note
+- So some key takeaways from today
+- Performance testing is not non-functional testing, but an extension of functional testing, if you can get the test correct enough
+- Test with a goal in mind and understand that your intuition may not always be correct, collect as much data as possible to help with your analysis
+- and remember statistic can sometimes work against you
+-->
 ## Takeaways
 
 - Performance Test != Non-Functional Testing
-- Test with the end in mind
 - Know your parameters and limits upfront
 - Test with the end in mind
 - Forgo any assumptions and verify using performance metrics
-- Stats can sometime work against you
+- Stats Lie!
 
 ---
-
+<!-- note
+- also a shameless plug, I maintain a list of performance testing tools on github along with some cool articles and conference talks of performance.
+- If you are also interested in performance then please check it out and contribute!
+-->
 ## Awesome Performance
 
 https://github.com/hbish/awesome-performance
 
 ---
-
+<!-- note
+- And that is pretty much all I wanted to talk about today, thanks!
+- I'm also open to question if there are any? 
+-->
 ## ✌️
 ### Thanks
 
