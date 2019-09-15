@@ -1,12 +1,19 @@
 import { Card } from '@fusuma/client';
 
+<!--note
+- Let take a look at what we will be talking about today.
+- We start off with what I call the boring bits, and thats an intro into performance testing and how cryptocurrency exchanges work.
+- We will then move into the lessons learnt section. Where I will be sharing about 7 of them.
+- There is a small section on performance engineering before I wrap up.
+-->
 ## Agenda
 
 <!-- contents -->
 
 ---
 <!-- sectionTitle: Quick Overview of Performance Testing -->
-<!-- note: It can also serve to investigate, measure, validate or verify other quality attributes of the system, such as scalability, reliability and resource usage. 
+<!-- note
+- It can also serve to investigate, measure, validate or verify other quality attributes of the system, such as scalability, reliability and resource usage. 
 -->
 
 ## ...a testing practice performed to determine how a system performs in terms of responsiveness and stability... 
