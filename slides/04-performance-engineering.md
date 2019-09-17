@@ -1,7 +1,9 @@
 <!-- sectionTitle: Performance Engineering -->
 <!--note
 - Now with the time remaining, I'd thought I go through some quickfire performance engineering questions that I came across in the past
+
 - And these doesn't apply to the crypto exchange API I was testing.
+
 - Alright off we go
 -->
 
@@ -12,7 +14,9 @@ Quickfire Edition
 ---
 <!-- note
 - Every thing we talked about still apply, but there are 2 important things to look out for
+
 - timeouts, so if you are seeing timeouts in your tests, make sure you work go through each microservices youre hitting and make sure the timeouts reduces as you get further and further away from the caller.
+
 - the other thing is spike tests is extremely important, because chances are you are scaling horizontally in a microservices architecture. So how quickly you scale matters. If your services take 10 minutes to spin up by then the traffic on your API might have already died down. This is especially true for a trading exchange where a trump tweet could drive traffic 
 -->
 ## What about Microservices/Serverless?
@@ -22,6 +26,7 @@ Quickfire Edition
 --- 
 <!--note
 - Now what about graphQL? again everything applies but it gets a lot more complicated depending on how the resolvers are implemented and you may need to performance test different combination of the request.
+
 - This is where request tracing becomes crucial.
 -->
 ## What about GraphQL?
@@ -32,7 +37,9 @@ Quickfire Edition
 --- 
 <!--note
 - I personally prefer using load testing frameworks that can be uses for other purposes and its a huge reason on why I selected gatling
+
 - I can parameterize a few things and all of a sudden, I'm able to use the same test suite for E2E testing, to performance testing and to smoke testing.
+
 - Obviously and I reiterate, your tests suite must be well thought out.
 -->
 ## Many birds, one stone 
@@ -60,8 +67,11 @@ Smoke Test in Production
 ---
 <!-- note
 - So extending on what we just talked about, we can reuse the tests in CI/CD as a initial checkpoint for performance
+
 - You can decide to run a subset or the entire suite that is up to you. But make sure you collect the results per run and have some sort of way to flag if the performance degrades.
+
 - The idea is to shift left and bump performance testing up the software development lifecycle to detect performance anomalies earlier
+
 - And interestingly a couple weeks before I submitted my talk to dddsydney, CloudFlare, one of the worlds largest content delivery network and web infrastructure provider suffered a global outage due to a small change to their WAF rule
 -->
 ## CI/CD
@@ -74,8 +84,11 @@ Smoke Test in Production
 ---
 <!-- note
 - It doesn't take a lot to cause an outage
+
 - What happened at Cloudflare, in a nutshell was a small change to a regular expression in it's WAF rules, backtracked and used up 100% of the CPU. This brought down Cloudflare’s core proxying, CDN and WAF functionality.
+
 - What they immediately did after the outage was to introduce performance profiling to all of its WAF rules as part of their CI/CD, as well as a review of their SOPs for WAF rule deployments.
+
 - If youre interested in root cause analysis and incident reports like I am. I strongly recommend you to have a look at cloudflare's blog post on its July 2nd outage. 
 
 -->
