@@ -13,7 +13,7 @@ Quickfire Edition
 
 ---
 <!-- note
-- Every thing we talked about still apply, but there are 2 important things to look out for
+- Every thing we talked about still apply to microservers and serverless, but there are 2 important things to look out for
 
 - timeouts, so if you are seeing timeouts in your tests, make sure you work go through each microservices youre hitting and make sure the timeouts reduces as you get further and further away from the caller.
 
