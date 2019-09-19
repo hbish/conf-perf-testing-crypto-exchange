@@ -28,9 +28,9 @@ import { Card } from '@fusuma/client';
 ## Quick Survey 🗳
 
 ---
-<!-- sectionTitle: performance testing -->
+<!-- sectionTitle: Performance testing overview -->
 <!-- note
-- Performance testing is a testing practice performed to determine how well a system behaves under load. 
+- Performance testing is a testing practice performed to determine how a system behaves under load. 
 
 - Its a testing technique used to investigate, measure and validate non-functional attributes of a system, such as responsiveness, scalability, reliability and resource usage.
 -->

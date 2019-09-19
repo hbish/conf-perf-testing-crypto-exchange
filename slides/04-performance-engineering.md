@@ -17,7 +17,9 @@ Quickfire Edition
 
 - timeouts, so if you are seeing timeouts in your tests, make sure you work go through each microservices youre hitting and make sure the timeouts reduces as you get further and further away from the caller.
 
-- the other thing is spike tests is extremely important, because chances are you are scaling horizontally in a microservices architecture. So how quickly you scale matters. If your services take 10 minutes to spin up by then the traffic on your API might have already died down. This is especially true for a trading exchange where a trump tweet could drive traffic 
+- the other thing is spike tests is extremely important, because chances are you are scaling horizontally in a microservices architecture. So how quickly you scale matters. If your services take 10 minutes to spin up by then the traffic on your API might have already died down. 
+
+- This is especially true for a trading exchange where a trump tweet could stimulate the market 
 -->
 ## What about Microservices/Serverless?
 - Watch for timeouts
@@ -66,7 +68,7 @@ Smoke Test in Production
 
 ---
 <!-- note
-- So extending on what we just talked about, we can reuse the tests in CI/CD as a initial checkpoint for performance
+- So extending on what we just talked about, we can reuse the tests in CI/CD as a initial checkpoint for performance since its just a gradle command
 
 - You can decide to run a subset or the entire suite that is up to you. But make sure you collect the results per run and have some sort of way to flag if the performance degrades.
 
@@ -123,8 +125,11 @@ Cloudflare Outage July 2019 - https://blog.cloudflare.com/details-of-the-cloudfl
 ---
 
 <!-- note
-- My personal view is, YES but only if you have the capability to cleanup the data, because production is production, youre not going to have another environment that is like for like with production in terms of version of the software that is deployed, especially in a microservices architecture, the data and also monitoring that exists
-- In lieu of a cleanup process then the next best thing is to have a environment that is production like, but the caveat there is, its still not production.
+- My personal view is, YES but only if you have the capability to cleanup the data, 
+
+- because production is production, youre not going to have another environment that is like for like with production in terms of deployed software version, especially in a microservices architecture, the data and also monitoring that exists
+
+- In lieu of a cleanup process then the next best thing is to have a environment that is production like, but the caveat there is, its still not production but it will give you a good enough indicator.
 -->
 ## Test in Production?
 ### Yes, only if you can cleanup the data
