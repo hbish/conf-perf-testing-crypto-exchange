@@ -35,6 +35,10 @@ https://github.com/hbish/awesome-performance
 
 <br/>
 <div>
+  <b>Slide deck: </b> https://dddsydney2019.hbish.com/
+</div>
+<br />
+<div>
     <small>
         <a href="https://twitter.com/hbish" target="_blank">
             <i class="fab fa-twitter"/> @hbish
