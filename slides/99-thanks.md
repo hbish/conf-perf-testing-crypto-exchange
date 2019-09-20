@@ -2,11 +2,11 @@
 <!-- note
 - So some key takeaways from today
 
-- Performance testing is not purely non-functional testing, but an extension of functional testing, if you can get the test correct enough
+- Performance testing is not purely non-functional testing, it can be an extension of functional testing, if you can get the tests and assertions going
 
 - Test with a goal in mind and understand that your intuition may not always be correct, collect as much data as possible to help with your analysis
 
-- and remember statistic can sometimes work against you
+- and remember statistic can sometimes work against you.
 -->
 ## Takeaways
 

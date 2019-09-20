@@ -5,9 +5,9 @@ import { Card } from '@fusuma/client';
 
 - We start off with what I call the boring bits, and thats an intro into performance testing and how cryptocurrency exchanges work.
 
-- We will then move into the lessons learnt section. Where I will be sharing about 7 lessons from a side project testing a crypto exchange API.
+- We will then move into the lessons learnt section. Where I will be sharing about 6 lessons from the crypto exchange API project
 
-- I'll also go through some performance engineering tips before I wrap up.
+- and finally we will go through some performance engineering tips before I wrap up.
 -->
 ## Agenda
 
@@ -22,7 +22,9 @@ import { Card } from '@fusuma/client';
 
 - Who here is a developer? and how many of you are tester or QA?
 
-- Who has dabbled in performance testing of APIs?
+- Who has done some sort of performance testing of APIs?
+
+- Awesome thats a lot more than I expected
 -->
 
 ## Quick Survey 🗳
@@ -30,9 +32,11 @@ import { Card } from '@fusuma/client';
 ---
 <!-- sectionTitle: Performance testing overview -->
 <!-- note
-- Performance testing is a testing practice performed to determine how a system behaves under load. 
+- So a quick intro those of you who havent had exposure to performance testing
 
-- Its a testing technique used to investigate, measure and validate non-functional attributes of a system, such as responsiveness, scalability, reliability and resource usage.
+- it is a testing practice performed to determine how a system behaves under load. 
+
+- Its a testing technique used to investigate, measure and validate non-functional attributes of a system, like resource usage, responsiveness, scalability and reliability.
 -->
 
 ## ...a testing practice performed to determine how a system performs in terms of responsiveness and stability... 
@@ -62,53 +66,9 @@ import { Card } from '@fusuma/client';
   </div>
 </div>
 
----
-<!-- classes: fullscreen-bg performance-testing -->
-<!-- note
-- So what exactly can we measure? 
-
-- majority of the people out there measure response time and throughput
-
-- And this adorable axolotl (ak·suh·laa·tl) is probably going to go very hungry trying to eat 
--->
-## What can we measure?
-
----
-<!-- note
-- You can measure from 2 different perspectives, client and server metric.
-
-- From the client you are measuring the round trip time with network latency embedded in it where as from the server perspective youre only looking at the how quickly the server can process the request and generate a response.
-
-- From the server side you can also look at availability, CPU, memory usage, disk and network utilization. 
-
-- And if your services has a database or a caching layer then you can also look at connection pooling or cache hit/miss ratio. There are a lot more metrics out there than the ones that I have listed here.
--->
-## What can we measure?
-<div class="wrap grid">
-    <div class="column">
-        <h4>Client</h4>
-        <ul>
-            <li>Latency/Response Time - Round Trip</li>
-            <li>Throughput</li>
-        </ul>
-    </div>
-    <div class="column">
-        <h4>Server</h4>
-        <ul>
-            <li>Latency/Response Time - Processing Time</li>
-            <li>Throughput</li>
-            <li>Availability</li>
-            <li>Server metrics - CPU, memory, disk I/O, network I/O...</li>
-            <li>Connection pooling</li>
-            <li>Cache hit/miss ratios</li>
-            <li>and more...</li>
-        </ul>
-    </div>
-</div>
-
 --- 
 <!-- note
-- And in terms of the types of performance testing there are serveral different ones and they achieve different purposes 
+- But actually there are several different types of performance testing out there and they achieve different purposes 
 
 - for example a load/spike testing is to check the system's responsiveness under load
 
@@ -116,9 +76,9 @@ import { Card } from '@fusuma/client';
 
 - breakpoint testing is where you slowly ramp up the request until your system breaks
 
-- configuration testing is where you try different setup within your architecture, load balancer or different sized instances etc
+- configuration testing is where you test different setup within your system, for example instance size or the number of instances for a particular service etc
 
-- If you are interested in knowing more about all the different type of testing I recommend this book. The art of performance testing. It will go into much more details that I have.
+- If you are interested in knowing more about all the different type of performance tests. I recommend this book. The art of performance testing. It will go into much more details that I have.
 -->
 ## What flavours does it come in?
 
@@ -140,8 +100,55 @@ The Art of Application Performance Testing - Ian Molyneaux
 </small>
 
 ---
+<!-- classes: fullscreen-bg performance-testing -->
+<!-- note
+- majority of the people out there measure response time and throughput
+
+- And this adorable axolotl (ak·suh·laa·tl) is probably going to go very hungry trying to eat if he is responding at the rate its doing.
+
+- So is there anything else we can measure?
+-->
+## What can we measure?
+
+---
+<!-- note
+- Absolutely, You can measure from 2 different perspectives, the client or the server
+
+- And when we talk about response time from the client, we are measuring the round trip time with network latency included in it where as from the server perspective were only looking at the how quickly the server can process the request and generate a response.
+
+- From the server side you can also look at availability, CPU, memory usage, disk and network utilization. 
+
+- And if your system has a database, caching layer or queues then you can also look at connection pooling or cache hit/miss ratio or queue depth. And there are a lot more metrics out there than the ones that I have listed here.
+-->
+## What can we measure?
+<div class="wrap grid">
+    <div class="column">
+        <h4>Client</h4>
+        <ul>
+            <li>Latency/Response Time - Round Trip</li>
+            <li>Throughput</li>
+        </ul>
+    </div>
+    <div class="column">
+        <h4>Server</h4>
+        <ul>
+            <li>Latency/Response Time - Processing Time</li>
+            <li>Throughput</li>
+            <li>Availability</li>
+            <li>Server metrics - CPU, memory, disk I/O, network I/O...</li>
+            <li>Connection pooling</li>
+            <li>Cache hit/miss ratios</li>
+            <li>Queue depth</li>
+            <li>and more...</li>
+        </ul>
+    </div>
+</div>
+
+---
 <!-- sectionTitle: Crash course on exchanges -->
 <!-- note
+- Now on to exchanges
+
 - A trading exchange as the name implies is a marketplace where people exchange one thing for another
 
 - So the thing can be anything from fiat money (like aussie dollar or US dollar), stocks, bonds, and in our case crypto-currencies
@@ -152,7 +159,7 @@ The Art of Application Performance Testing - Ian Molyneaux
 
 ---
 <!-- note
-- Most exchanges are centralized meaning the exchange creates wallets on your behalf and they safeguards your money
+- Most crypto exchanges are centralized meaning the exchange creates wallets on your behalf and they safeguards your money
 
 - Centralised exchanges require you to perform KYC (know you customer) basically an identity check through some sort of personal identifiable information and there are different levels of KYC which would grant you additional trading volumes, there for you are not anonymous on a centralised exchange
 
@@ -171,7 +178,7 @@ The Art of Application Performance Testing - Ian Molyneaux
 
 - Market data endpoints basically allows you to check symbols/tickers to see prices and the order book. Where all of the orders on the exchange are aggregated by the price and you get to see the volume by supply and demand.
 
-- So exchanges also have a websocket feed to retrieve real-time information like the price of the symbol, the high/low over different period of time. I'm not going to spend to much time on these, if you are interested feel free to read up the API documentation for any of the popular exchanges.
+- So exchanges also have a websocket feed to retrieve real-time information like the price of the symbol or if orders gets matched. If you are interested in learning more, then go on a popular exchange and have a look at their API documentation.
 -->
 <Card
   right={<img src="../static/images/api.png" alt="Centralized vs Decentralized Exchanges" />}
@@ -184,7 +191,7 @@ The Art of Application Performance Testing - Ian Molyneaux
 
 --- 
 <!-- note
-- Now lets take a look at the a typical exchange architecture
+- Now lets take a look at a typical exchange architecture
 
 - This is a extremely simplified view of how a crypto exchange works
 
