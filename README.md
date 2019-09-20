@@ -2,6 +2,8 @@
 
 Slides for DDDSydney 2019 on 21st September 2019
 
+[https://dddsydney2019.hbish.com/](https://dddsydney2019.hbish.com/) 
+
 Ben Shi ([@hbish](https://twitter.com/hbish))
 
 ## Summary
